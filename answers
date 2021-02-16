@@ -1,1 +1,164 @@
 answers for assessment
+
+8.call by value
+
+#include<stdio.h>
+void swap(a,b);
+int main(0
+{
+int a,b;
+printf("enter the values  for a and b:\n");
+scanf("%d %d",&a,&b);
+printf("before swaping %d %d\n\n",a,b);
+swap(a,b);
+printf("after swaping %d %d\n\n",a,b);
+return 0:
+}
+void swap(int var1,int var2)
+{
+int temp;
+temp=var1;
+var1=var2;
+var1=temp;
+printf("%d %d\n",var1,var2);
+}
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+8.call by refrence
+
+#include<stdio.h>
+void swap(a,b);
+int main(0
+{
+int a,b;
+printf("enter the values  for a and b:\n");
+scanf("%d %d",&a,&b);
+printf("before swaping %d %d\n\n",a,b);
+swap(&a,&b);
+printf("after swaping %d %d\n\n",a,b);
+return 0:
+}
+void swap(int *var1,int *var2)
+{
+int temp;
+temp=*var1;
+*var1=*var2;
+*var1=temp;
+printf("%d %d\n",*var1,*var2);
+}
+-----------------------------------------------------------------------------------------------------------------------------
+9.biggest number using dynamic memory allocation
+
+#include<stdio.h>
+int main()
+{
+int *p;
+int i;
+p=(int*)calloc(5,sizeof(int));
+printf("enter the elements: \n");
+for(i=0;i<5;++i)
+{
+printf("enter the elements %d ",i+1);
+scanf("%d",p+i);
+}
+for(int i=1;i<5;++i)
+{
+if(*p<*(p+i))
+*p=*(p+i);
+}
+printf("the biggest number is %d",*p);
+return 0;
+}
+--------------------------------------------------------------------------------------------------------------------------------
+
+2.biggest  number using array
+
+#include<stdio.h>
+int main()
+{
+int i,n;
+int ar[10];
+printf("enter the number: \n");
+scanf("%d",&n);
+for(i=0;i<n;i++)
+{
+scanf("%d",&ar[i]);
+}
+for(i=0;i<n;i++)
+{
+if(ar[0]<ar[i])
+ar[0]=ar[i];
+}
+printf("biggest number is %d",ar[i]);
+return 0;
+}
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+4.array of size 10 using malloc
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+int *p;
+int i;si;flag=0;
+p=(int*)malloc(10*sizeof(int));
+printf("enter the elements :\n);
+for(i=0;i<10;++i)
+{
+printf("enter the elements %d",i+1);
+scanf("%d",p+i);
+}
+printf("enteer the search id: \n");
+scanf("%d",&si);
+for(i=0;i<10;++i)
+{
+if(si==*(p+i))
+{
+flaf=1;
+break;
+}
+if(flag==1)
+{
+printf("employe found");
+}
+else
+{
+printf("employee not found");
+}
+return 0;
+}
+---------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+6.using malloc to allocate memory
+
+#include<stdio.h>
+#include<string.h>
+struct emp
+{
+char id[10];
+char phone[10];
+};
+int main()
+{
+struct emp *alf;
+alf=(struct emp*)malloc(2*sizeof(struct emp));
+for(int i=0;i<2;;++i)
+{
+scanf("%s %s ",(alf+i)->id,(alf+i)->phone);
+}
+printf("%s %s ",(alf+i)->id,(alf+i)->phone);
+}
+return 0;
+}
+
+
+
+
+
+
+
